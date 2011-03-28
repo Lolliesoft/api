@@ -119,14 +119,14 @@ var Ajax = {
     }
 };
 
-var FlattrButton = {
+var payerrButton = {
 
     click: function(href) {
     
         var options = {
             onSuccess: function(buffer) {
-                replaceWith('flattr-1', buffer);
-                FlattrButton.init();
+                replaceWith('payerr-1', buffer);
+                payerrButton.init();
             },
             onFailure: function(code, message) {
                 if (code == 410 || code == 402) {
@@ -143,24 +143,24 @@ var FlattrButton = {
     init: function() {
         var arr = document.getElementsByTagName('a');
         for(i=0; i < arr.length; i++) {
-            if (/flattr/.test(arr[i].className)) {
+            if (/payerr/.test(arr[i].className)) {
 
                 var href = arr[i].href;
-                if (/flattr-ajax/.test(arr[i].className)) {
+                if (/payerr-ajax/.test(arr[i].className)) {
                     arr[i].onclick = function() {
-                        FlattrButton.click(href);
+                        payerrButton.click(href);
                         return false;
                     };
-                } else if ( /flattr-pop/.test(arr[i].className) ) {
+                } else if ( /payerr-pop/.test(arr[i].className) ) {
                     arr[i].onclick = function() {
                         
-                        FlattrButton.popup(href);
+                        payerrButton.popup(href);
                         return false;
                     };
-                } else if ( /flattr-ed/.test(arr[i].className) ) {
+                } else if ( /payerr-ed/.test(arr[i].className) ) {
                     arr[i].onclick = function() {
                         
-                        FlattrButton.compact(href);
+                        payerrButton.compact(href);
                         return false;
                     };
                 }
@@ -174,8 +174,8 @@ var FlattrButton = {
         var matches = href.match(re);       
         url = matches[1].toString() +'://'+ matches[2].toString() +'/'+ matches[3].toString();
 
-        flattrPopupWin = window.open(url, 'Flattr', 'menubar=0,resizable=1,width=705,height=330,scrollbars=1,status=0,toolbar=0,location=0,directories=0');
-        flattrPopupWin.focus();
+        payerrPopupWin = window.open(url, 'payerr', 'menubar=0,resizable=1,width=705,height=330,scrollbars=1,status=0,toolbar=0,location=0,directories=0');
+        payerrPopupWin.focus();
     },
     
     popup: function(href) {
@@ -186,8 +186,8 @@ var FlattrButton = {
         var hrefArr = href.split('/');
         var tid = hrefArr[(hrefArr.length-1)];
         
-        flattrPopupWin = window.open('http://'+ domain +'/login-compact?'+ tid, 'Flattr', 'menubar=0,resizable=1,width=695,height=400,scrollbars=1,status=0,toolbar=0,location=0,directories=0');
-        flattrPopupWin.focus();
+        payerrPopupWin = window.open('http://'+ domain +'/login-compact?'+ tid, 'payerr', 'menubar=0,resizable=1,width=695,height=400,scrollbars=1,status=0,toolbar=0,location=0,directories=0');
+        payerrPopupWin.focus();
     }
 
 };
@@ -196,4 +196,4 @@ function redirect(url) {
     window.open(url, '_blank');
 }
 
-window.onload = function(){ FlattrButton.init(); };
+window.onload = function(){ payerrButton.init(); };
