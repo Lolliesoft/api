@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @api_dashboard.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @api_dashboard.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_api_dashboard_path(@api_dashboard) %> |
+<%= link_to 'Back', api_dashboards_path %>
