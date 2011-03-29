@@ -1,5 +1,15 @@
-api.payerr.com Alpha 1.8
-Mar 27, 2011
+api.payerr.com 
++++++++++++++++++++++++++
+Mar 28, 2011  Alpha 2.0
+-fixed buttons
+-early design of css (payerr-button.css)
+-early javascript js/0.6
+-all work done in public directory
+-need to create clicks, id , wesite REST in Rails
+-need to remove current models
+-need to make relationship with users and profiles tables
+
+Mar 27, 2011  Alpha 1.8
 ========================================================================================================================
 -basic javascript code
 -early png design
