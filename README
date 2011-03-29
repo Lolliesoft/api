@@ -1,5 +1,5 @@
 api.payerr.com 
-+++++++++++++++++++++++++
+=======================================================================================================================
 Mar 28, 2011  Alpha 2.0
 -fixed buttons
 -early design of css (payerr-button.css)
@@ -9,7 +9,8 @@ Mar 28, 2011  Alpha 2.0
 -need to remove current models
 -need to make relationship with users and profiles tables
 
++++++++++++++++++++++++++
 Mar 27, 2011  Alpha 1.8
-=======================================================================================================================
++++++++++++++++++++++++++
 -basic javascript code
 -early png design

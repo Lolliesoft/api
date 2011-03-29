@@ -12,13 +12,6 @@
 
 ActiveRecord::Schema.define(:version => 20110328010958) do
 
-  create_table "api_dashboards", :force => true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "dashboards", :force => true do |t|
     t.integer  "clicks"
     t.string   "website"

@@ -1,6 +1,4 @@
-Api::Application.routes.draw do
-  resources :api_dashboards
-  root :to => "api_dashboards#index"
+Api::Application.routes.draw do  root :to => "api_dashboards#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
